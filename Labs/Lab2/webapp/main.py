@@ -4,11 +4,6 @@ from flask import *
 app = Flask(__name__)
 pi_gpio = PiGpio()
 
-... add APIs <here>
-
-if __name__ == "__main__":
-    app.run(host='0.0.0.0', debug=True)
-
 @app.route("/")
 def index():
     # create an instance of my pi gpio object class.
@@ -61,4 +56,7 @@ def ledcommand():
     return "Led State Command:" + state + " for LED number:"+ str(led) + "\n"
     # -----------------------------------------------------------------------------
 # ============================== API Routes ===================================
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', debug=True)
 
