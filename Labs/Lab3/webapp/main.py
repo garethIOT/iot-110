@@ -1,4 +1,3 @@
-
 from gpio import PiGpio
 from flask import *
 
