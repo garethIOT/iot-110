@@ -1,7 +1,6 @@
 from gpio import PiGpio
 from flask import *
 
-
 app = Flask(__name__)
 pi_gpio = PiGpio()
 
