@@ -7,13 +7,16 @@
 
         /* intercept the incoming states from SSE */
         iotSource.onmessage = function(e) {
-          var params = e.data.split(' ');
-          updateSwitch(params[0]);
-          updateLeds(1,params[1]);
-          updateLeds(2,params[2]);
-          updateLeds(3,params[3]);
+          //just log for testing
+          console.log(e.data);
+
+          // var params = e.data.split(' ');
+          // updateSwitch(params[0]);
+          // updateLeds(1,params[1]);
+          // updateLeds(2,params[2]);
+          // updateLeds(3,params[3]);
         }
-        
+
     // The button click functions run asynchronously in the browser
     $('#red_led_btn').click(function() {
       if (led1 === "OFF") {led1 = "ON";} else {led1 = "OFF";}
