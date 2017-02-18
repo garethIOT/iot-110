@@ -32,4 +32,6 @@ h4.gpio {
   width: 75%;
   text-align: center;
 }
-
+.param-row {
+	font-size: 75%;
+}
