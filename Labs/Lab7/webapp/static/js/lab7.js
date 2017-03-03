@@ -164,10 +164,12 @@ $(document).ready(function() {
   });
   $( "#pwm1" ).val( $( "#slider1" ).slider( "value" ) );
   // ... add code to control PWM driver for hardware ...
+/*
   $( "#pwm1" ).change(function() {
    console.log('LED RED changed to ' + $( "#pwm1" ).val());
    $.get('/led_red'+ $( "# pwm1" ).val());
  });
+*/
   // ===================================================================
   // GREEN LED SLIDER
   $( "#slider2" ).slider({
@@ -188,10 +190,12 @@ $(document).ready(function() {
   });
   $( "#pwm2" ).val( $( "#slider2" ).slider( "value" ) );
   // ... add code to control PWM driver for hardware ...
+/*
   $( "#pwm2" ).change(function() {
    console.log('LED GREEN changed to ' + $( "#pwm2" ).val());
    $.get('/led_green'+ $( "# pwm2" ).val());
  });
+*/
   // ===================================================================
 
 
