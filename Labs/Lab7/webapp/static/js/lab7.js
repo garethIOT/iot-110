@@ -156,7 +156,11 @@ $(document).ready(function() {
     slide: function( event, ui ) {
       $( "#pwm1" ).val( ui.value );
       console.log("red led duty cycle(%):",ui.value);
-    }
+    },
+    change: function( event, ui ) {
+      console.log("LED RED changed to ", ui.value);
+      $.get('/led_red/'+ ui.value);
+   }
   });
   $( "#pwm1" ).val( $( "#slider1" ).slider( "value" ) );
   // ... add code to control PWM driver for hardware ...
@@ -176,6 +180,10 @@ $(document).ready(function() {
     slide: function( event, ui ) {
       $( "#pwm2" ).val( ui.value );
       console.log("grn led duty cycle(%):",ui.value);
+    },
+    change: function( event, ui ) {
+      console.log("LED GREEN changed to ", ui.value);
+      $.get('/led_green/'+ ui.value);
     }
   });
   $( "#pwm2" ).val( $( "#slider2" ).slider( "value" ) );
